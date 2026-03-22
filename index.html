@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoGuard Recovery • Recover Your Lost Crypto Assets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); }
+        .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgb(0 255 100 / 0.2); }
+        .nav-link { position: relative; }
+        .nav-link:after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #22c55e; transition: width 0.3s; }
+        .nav-link:hover:after { width: 100%; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+    <!-- NAVBAR -->
+    <nav class="bg-black border-b border-zinc-800 fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-emerald-500 rounded-2xl flex items-center justify-center text-2xl font-bold">CG</div>
+                <div>
+                    <span class="text-2xl font-bold tracking-tighter">CryptoGuard</span>
+                    <span class="text-emerald-500 text-sm block -mt-1">RECOVERY</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#track" class="nav-link">Track Transaction</a>
+                <a href="#how" class="nav-link">How It Works</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/2349012345678" target="_blank" 
+                   class="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 px-5 py-2.5 rounded-2xl text-sm font-semibold transition">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <button onclick="showSupportModal()" 
+                        class="bg-white text-black px-6 py-2.5 rounded-2xl font-semibold hover:bg-zinc-100 transition">
+                    Live Support
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-500 px-4 py-2 rounded-full text-sm">
+                    <i class="fas fa-shield-alt"></i> 100% SECURE • BLOCKCHAIN POWERED
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-bold leading-none tracking-tighter">
+                    Recover Your<br>Lost Crypto Assets
+                </h1>
+                <p class="text-xl text-zinc-400 max-w-lg">
+                    Professional recovery &amp; transaction tracking for Bitcoin, Ethereum, USDT, Solana and 50+ chains. 
+                    Trusted by 12,847 victims worldwide.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="document.getElementById('complaint-form').scrollIntoView({ behavior: 'smooth' })" 
+                            class="bg-emerald-500 hover:bg-emerald-600 text-black font-bold text-lg px-10 py-4 rounded-3xl flex items-center gap-3">
+                        Submit Recovery Claim
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <a href="#track" class="border border-zinc-700 hover:border-zinc-500 text-white font-bold text-lg px-10 py-4 rounded-3xl transition">
+                        Track Transaction Now
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-8 text-sm">
+                    <div>
+                        <div class="flex text-emerald-400">
+                            ★★★★☆
+                        </div>
+                        <p class="text-zinc-500">4.98/5 from 3,241 reviews</p>
+                    </div>
+                    <div class="h-10 w-px bg-zinc-800"></div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-lock text-emerald-400"></i>
+                        <p class="text-zinc-400">SSL Secured • GDPR Compliant</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero visual -->
+            <div class="relative">
+                <div class="bg-zinc-900 rounded-3xl p-8 shadow-2xl border border-emerald-500/20">
+                    <div class="bg-black rounded-2xl p-6 text-center">
+                        <div class="w-24 h-24 mx-auto bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fas fa-wallet text-6xl text-emerald-400"></i>
+                        </div>
+                        <p class="text-emerald-400 text-2xl font-bold">₿ 12.45 BTC</p>
+                        <p class="text-zinc-400 text-sm">Recovered in 47 hours</p>
+                    </div>
+                </div>
+                <!-- floating badges -->
+                <div class="absolute -top-8 -right-8 bg-zinc-900 border border-emerald-400 text-emerald-400 text-xs font-bold px-6 py-3 rounded-2xl shadow-xl">
+                    RECOVERED TODAY<br><span class="text-3xl">$284,900</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-emerald-500 font-semibold tracking-widest">OUR EXPERTISE</span>
+                <h2 class="text-5xl font-bold mt-3">How We Help Victims</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="card-hover bg-zinc-900 rounded-3xl p-8 border border-zinc-800">
+                    <i class="fas fa-search-dollar text-5xl text-emerald-400 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Lost Asset Recovery</h3>
+                    <p class="text-zinc-400 mb-8">We trace stolen funds, hacked wallets, phishing scams, and mistaken transfers across all major blockchains.</p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> 48-hour initial report</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Legal coordination with exchanges</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Success rate 87% on traceable cases</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-hover bg-zinc-900 rounded-3xl p-8 border border-zinc-800">
+                    <i class="fas fa-chart-line text-5xl text-emerald-400 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Real-Time Transaction Tracking</h3>
+                    <p class="text-zinc-400 mb-8">Instant blockchain forensics. Enter any wallet address or TX hash and get full movement history.</p>
+                    <div class="bg-zinc-950 rounded-2xl p-4 text-xs font-mono text-emerald-400">
+                        0x742d35Cc... → Binance<br>
+                        12.45 ETH confirmed
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-hover bg-zinc-900 rounded-3xl p-8 border border-zinc-800">
+                    <i class="fas fa-headset text-5xl text-emerald-400 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-3">24/7 Victim Support</h3>
+                    <p class="text-zinc-400 mb-8">Dedicated recovery agents, lawyers, and blockchain analysts available instantly.</p>
+                    <div class="flex gap-4 text-2xl">
+                        <a href="https://wa.me/2349012345678" class="hover:text-emerald-400"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/cryptoguard_support" class="hover:text-emerald-400"><i class="fab fa-telegram"></i></a>
+                        <a href="https://instagram.com/cryptoguard_recovery" class="hover:text-emerald-400"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRANSACTION TRACKER -->
+    <section id="track" class="py-24 bg-zinc-950">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-zinc-900 rounded-3xl p-12 border border-zinc-800">
+                <h2 class="text-4xl font-bold text-center mb-8">Track Your Transaction Instantly</h2>
+                <div class="max-w-xl mx-auto">
+                    <div class="flex gap-3">
+                        <input id="tx-input" type="text" placeholder="Enter TX Hash or Wallet Address" 
+                               class="flex-1 bg-black border border-zinc-700 rounded-3xl px-8 py-6 text-lg focus:outline-none focus:border-emerald-400">
+                        <button onclick="trackTransaction()" 
+                                class="bg-emerald-500 hover:bg-emerald-600 text-black font-bold px-12 rounded-3xl">TRACK</button>
+                    </div>
+                    
+                    <!-- Results area -->
+                    <div id="track-result" class="hidden mt-8 bg-black rounded-3xl p-8 border border-emerald-500/30">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-emerald-400 text-sm font-medium">STATUS: CONFIRMED</p>
+                                <p id="tx-amount" class="text-4xl font-bold mt-2">12.45 ETH</p>
+                                <p id="tx-wallet" class="text-zinc-400 font-mono text-sm mt-1">0x742d35Cc6634C0532925a3b844Bc454e4438f44e</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-emerald-400 text-xs">RECOVERABLE</p>
+                                <button onclick="claimRecovery()" 
+                                        class="mt-4 bg-emerald-500 text-black px-8 py-3 rounded-2xl text-sm font-bold">START RECOVERY CLAIM</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPLAINT / CONTACT FORM -->
+    <section id="contact" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <!-- Form -->
+            <div>
+                <h2 class="text-5xl font-bold mb-3">File Your Recovery Claim</h2>
+                <p class="text-zinc-400 mb-10">Submit details below. Our team responds within 2 hours.</p>
+                
+                <form id="complaint-form" onsubmit="submitComplaint(event)" class="space-y-6">
+                    <div class="grid grid-cols-2 gap-6">
+                        <input type="text" id="name" placeholder="Full Name" required
+                               class="bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-5 focus:outline-none focus:border-emerald-400">
+                        <input type="email" id="email" placeholder="Email Address" required
+                               class="bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-5 focus:outline-none focus:border-emerald-400">
+                    </div>
+                    
+                    <input type="text" id="wallet" placeholder="Wallet Address or TX Hash" 
+                           class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-5 focus:outline-none focus:border-emerald-400">
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <select id="crypto" class="bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-5 focus:outline-none focus:border-emerald-400">
+                            <option value="">Crypto Type</option>
+                            <option>BTC</option>
+                            <option>ETH</option>
+                            <option>USDT</option>
+                            <option>SOL</option>
+                            <option>Other</option>
+                        </select>
+                        <input type="text" id="amount" placeholder="Amount Lost (USD)" 
+                               class="bg-zinc-900 border border-zinc-700 rounded-2xl px-6 py-5 focus:outline-none focus:border-emerald-400">
+                    </div>
+                    
+                    <textarea id="description" rows="5" placeholder="Describe what happened (scam, hack, wrong address...)" 
+                              class="w-full bg-zinc-900 border border-zinc-700 rounded-3xl px-6 py-5 focus:outline-none focus:border-emerald-400"></textarea>
+                    
+                    <button type="submit" 
+                            class="w-full bg-emerald-500 hover:bg-emerald-600 text-black font-bold py-6 rounded-3xl text-lg transition">
+                        SUBMIT CLAIM — START RECOVERY
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact info -->
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Instant Contact Channels</h3>
+                    <div class="space-y-4">
+                        <a href="https://wa.me/2349012345678" target="_blank"
+                           class="flex items-center gap-5 bg-zinc-900 hover:bg-zinc-800 p-6 rounded-3xl transition group">
+                            <i class="fab fa-whatsapp text-4xl text-emerald-400"></i>
+                            <div>
+                                <p class="font-semibold text-lg">WhatsApp (24/7)</p>
+                                <p class="text-emerald-400">+234 901 234 5678</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://t.me/cryptoguard_support" target="_blank"
+                           class="flex items-center gap-5 bg-zinc-900 hover:bg-zinc-800 p-6 rounded-3xl transition group">
+                            <i class="fab fa-telegram text-4xl text-sky-400"></i>
+                            <div>
+                                <p class="font-semibold text-lg">Telegram Support</p>
+                                <p class="text-sky-400">@cryptoguard_support</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://instagram.com/cryptoguard_recovery" target="_blank"
+                           class="flex items-center gap-5 bg-zinc-900 hover:bg-zinc-800 p-6 rounded-3xl transition group">
+                            <i class="fab fa-instagram text-4xl text-pink-400"></i>
+                            <div>
+                                <p class="font-semibold text-lg">Instagram DMs</p>
+                                <p class="text-pink-400">@cryptoguard_recovery</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-900 rounded-3xl p-8">
+                    <p class="text-emerald-400 text-sm font-medium mb-2">HEAD OFFICE</p>
+                    <p class="font-medium">Abuja, Nigeria • Global Operations</p>
+                    <p class="text-zinc-400 text-sm mt-6">Our recovery specialists are online right now.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-zinc-800 py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center text-zinc-500 text-sm">
+            <p>© 2026 CryptoGuard Recovery. All rights reserved.</p>
+            <p class="mt-2">This is a professional recovery service. We do not guarantee 100% recovery — only traceable cases are eligible.</p>
+            <div class="flex justify-center gap-8 mt-8">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Terms of Service</a>
+                <a href="#" class="hover:text-white">Legal Disclaimer</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIVE SUPPORT MODAL -->
+    <div id="support-modal" class="hidden fixed inset-0 bg-black/80 flex items-end md:items-center justify-center z-[999]">
+        <div class="bg-zinc-900 w-full max-w-md rounded-t-3xl md:rounded-3xl overflow-hidden">
+            <!-- Chat header -->
+            <div class="bg-emerald-500 text-black px-6 py-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-white rounded-2xl flex items-center justify-center">👨‍💼</div>
+                    <div>
+                        <p class="font-bold">Alex Rivera</p>
+                        <p class="text-xs opacity-80">Senior Recovery Agent • Online</p>
+                    </div>
+                </div>
+                <button onclick="hideSupportModal()" class="text-2xl">×</button>
+            </div>
+            
+            <!-- Chat body -->
+            <div id="chat-messages" class="h-96 p-6 overflow-y-auto bg-zinc-950 space-y-4 text-sm">
+                <!-- JS will add messages -->
+            </div>
+            
+            <!-- Input -->
+            <div class="p-4 border-t border-zinc-800 bg-zinc-900">
+                <div class="flex gap-3">
+                    <input id="chat-input" type="text" placeholder="Type your message..." 
+                           class="flex-1 bg-zinc-800 rounded-3xl px-6 py-4 focus:outline-none">
+                    <button onclick="sendChatMessage()" 
+                            class="bg-emerald-500 text-black px-8 rounded-3xl font-bold">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script already loaded via CDN
+
+        function trackTransaction() {
+            const input = document.getElementById('tx-input').value.trim();
+            const result = document.getElementById('track-result');
+            
+            if (!input) {
+                alert("Please enter a transaction hash or wallet address");
+                return;
+            }
+            
+            result.classList.remove('hidden');
+            document.getElementById('tx-amount').textContent = "8.73 ETH";
+            document.getElementById('tx-wallet').textContent = input.substring(0, 42);
+        }
+
+        function claimRecovery() {
+            alert("✅ Claim started! Our recovery team has been notified and will contact you within 60 minutes via WhatsApp or email.");
+            window.location.href = "#contact";
+        }
+
+        function submitComplaint(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            
+            if (!name) return;
+            
+            alert(`Thank you, ${name}!\n\nYour recovery claim has been received.\n\nA senior agent will contact you on WhatsApp within 2 hours.\n\nReference #CG-${Math.floor(Math.random()*90000)+10000}`);
+            
+            // Reset form
+            document.getElementById('complaint-form').reset();
+        }
+
+        // Live chat simulation
+        let chatOpen = false;
+        
+        function showSupportModal() {
+            document.getElementById('support-modal').classList.remove('hidden');
+            chatOpen = true;
+            
+            // Welcome message
+            const messages = document.getElementById('chat-messages');
+            messages.innerHTML = `
+                <div class="flex gap-3">
+                    <div class="w-8 h-8 bg-emerald-500 rounded-2xl flex-shrink-0"></div>
+                    <div class="bg-zinc-800 rounded-3xl px-5 py-3 max-w-[80%]">
+                        Hello! I'm Alex, your dedicated recovery specialist.<br>
+                        How can I help you recover your lost assets today?
+                    </div>
+                </div>
+            `;
+        }
+        
+        function hideSupportModal() {
+            document.getElementById('support-modal').classList.add('hidden');
+        }
+        
+        function sendChatMessage() {
+            const input = document.getElementById('chat-input');
+            const msg = input.value.trim();
+            if (!msg) return;
+            
+            const messages = document.getElementById('chat-messages');
+            
+            // User message
+            messages.innerHTML += `
+                <div class="flex justify-end">
+                    <div class="bg-emerald-500 text-black rounded-3xl px-5 py-3 max-w-[80%]">
+                        ${msg}
+                    </div>
+                </div>
+            `;
+            
+            input.value = '';
+            messages.scrollTop = messages.scrollHeight;
+            
+            // Auto reply after 800ms
+            setTimeout(() => {
+                messages.innerHTML += `
+                    <div class="flex gap-3">
+                        <div class="w-8 h-8 bg-emerald-500 rounded-2xl flex-shrink-0"></div>
+                        <div class="bg-zinc-800 rounded-3xl px-5 py-3 max-w-[80%]">
+                            Thank you. I've noted your case. Please send me the transaction hash on WhatsApp for immediate analysis.
+                        </div>
+                    </div>
+                `;
+                messages.scrollTop = messages.scrollHeight;
+            }, 800);
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                const modal = document.getElementById('support-modal');
+                if (!modal.classList.contains('hidden')) hideSupportModal();
+            }
+        });
+
+        // Smooth scrolling for nav
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Keyboard support for track input
+        document.getElementById('tx-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') trackTransaction();
+        });
+    </script>
+</body>
+</html>
